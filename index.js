@@ -1,0 +1,148 @@
+module.exports = {
+	rules: {
+		'jsx-closing-bracket-location': require('./jsx-closing-bracket-location'),
+		'jsx-closing-tag-location': require('./jsx-closing-tag-location'),
+	},
+	configs: {
+		recommended: {
+			extends: [
+				'eslint:recommended',
+			],
+			rules: {
+				'no-multiple-empty-lines': ['error', {
+					'max': 1,
+					'maxEOF': 0,
+					'maxBOF': 0,
+				}],
+				'strict': ['error', 'global'],
+				'space-before-function-paren': ['error', 'never'],
+				'space-before-blocks': 'error',
+				'camelcase': 'error',
+				'semi': 'error',
+				'eqeqeq': 'error',
+				'curly': 'error',
+				'quotes': ['error', 'single', 'avoid-escape'],
+				'no-unreachable': 'error',
+				'no-unused-vars': 'error',
+				'array-bracket-spacing': ['error', 'never'],
+				'comma-spacing': ['error', {'before': false, 'after': true}],
+				'no-console': ['error', { 'allow' : ['info', 'warn', 'error'] }],
+				'indent': ['error', 'tab', {'SwitchCase': 1}],
+				'arrow-spacing': 'error',
+				'react/prop-types': 0,
+				'no-trailing-spaces': 'error',
+				'object-curly-spacing': ['error', 'always'],
+				'space-infix-ops': ['error'],
+				'one-var-declaration-per-line': ['error'],
+				'comma-dangle': ['error', 'always-multiline'],
+				'keyword-spacing': ['error', {
+					'overrides': {
+						'if': { 'after': false },
+						'switch': { 'after': false },
+						'while': { 'after': false },
+						'for': { 'after': false },
+					},
+				}],
+				'space-in-parens': ['error', 'never'],
+				'function-paren-newline': ['error', 'multiline'],
+				'no-multi-spaces': 'error',
+				'semi-spacing': 'error',
+				'block-spacing': 'error',
+				'no-tabs': ['error', {
+					'allowIndentationTabs': true,
+				}],
+				'padded-blocks': ['error', {
+					'blocks': 'never',
+				}],
+				'array-element-newline': ['error', 'consistent'],
+				'array-bracket-newline': ['error', {
+					'multiline': true,
+				}],
+				'max-statements-per-line': 'error',
+				'max-lines': ['warn', {
+					'max': 500,
+					'skipBlankLines': true,
+					'skipComments': true,
+				}],
+				'no-undef': 'error',
+				'key-spacing': 'error',
+				'padding-line-between-statements': [
+					'error',
+					{ 'blankLine': 'always', 'prev': '*', next: 'class' },
+					{ 'blankLine': 'always', 'prev': 'class', next: '*' },
+				],
+				'object-shorthand': ['error', 'always'],
+			}
+		},
+		'recommended-jsx': {
+			extends: [
+				'plugin:jk/recommended',
+				'plugin:react/recommended',
+			],
+			plugins: [
+				'jk',
+				'react',
+			],
+			rules: {
+				'react/jsx-curly-spacing': ['error', {
+					'when': 'always',
+					'children': true,
+				}],
+				'react/jsx-equals-spacing': ['error', 'never'],
+				'react/jsx-tag-spacing': ['error', {
+					'closingSlash': 'never',
+					'beforeSelfClosing': 'always',
+					'afterOpening': 'never',
+					'beforeClosing': 'never',
+				}],
+				'react/jsx-indent': ['error', 'tab'],
+				'jsx-quotes': ['error', 'prefer-single'],
+				'react/jsx-curly-newline': 'error',
+			}
+		},
+		'recommended-jsx-jk': {
+			extends: [
+				'plugin:jk/recommended-jsx',
+			],
+			plugins: [
+				'jk',
+				'react',
+			],
+			rules: {
+				'jk/jsx-closing-bracket-location': 'error',
+			}
+		},
+		'default-jsx-node': {
+			"extends": [
+				"plugin:jk/recommended-jsx-jk",
+			],
+			"parser": "@babel/eslint-parser",
+			"plugins": [
+				"jk",
+				"react",
+			],
+			"settings": {
+				"react": {
+					"pragma": "React",
+					"version": "detect"
+				}
+			},
+			"parserOptions": {
+				"ecmaVersion": 2019,
+				"ecmaFeatures": {
+					"jsx": true,
+					"modules": true,
+					"es6": true,
+					"blockBindings": true,
+					"arrowFunctions": true,
+					"objectLiteralShorthandProperties": true,
+				},
+			},
+			"env": {
+				"browser": true,
+				"node": true,
+				"es6": true
+			}
+		}
+	}
+};
