@@ -72,6 +72,7 @@ module.exports = {
 					{ 'blankLine': 'always', 'prev': 'class', next: '*' },
 				],
 				'object-shorthand': ['error', 'always'],
+				'prefer-const': 'error',
 			}
 		},
 		'recommended-jsx': {
