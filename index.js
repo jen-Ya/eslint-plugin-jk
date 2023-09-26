@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
 	rules: {
 		'jsx-closing-bracket-location': require('./jsx-closing-bracket-location'),
@@ -80,6 +82,8 @@ module.exports = {
 					'error',
 					{ 'blankLine': 'always', 'prev': '*', next: 'class' },
 					{ 'blankLine': 'always', 'prev': 'class', next: '*' },
+					{ 'blankLine': 'always', 'prev': 'export', 'next': '*' },
+					{ 'blankLine': 'always', 'next': 'export', 'prev': '*' },
 				],
 				'object-shorthand': ['error', 'always'],
 				'prefer-const': 'error',
