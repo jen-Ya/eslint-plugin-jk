@@ -4,5 +4,8 @@
 	"main": "index.js",
 	"dependencies": {
 		"@babel/eslint-parser": "^7.22.15"
+	},
+	"devDependencies": {
+		"eslint-plugin-jk": "github:jen-Ya/eslint-plugin-jk"
 	}
 }

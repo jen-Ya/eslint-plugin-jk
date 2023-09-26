@@ -1,0 +1,14 @@
+{
+	"extends": [
+		"plugin:jk/recommended"
+	],
+	"plugins": [
+		"jk"
+	],
+	"env": {
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest"
+	}
+}

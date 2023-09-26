@@ -18,12 +18,12 @@ module.exports = {
 				const source = context.getSourceCode();
 				const opening = source.getFirstToken(node);
 				const closing = source.getLastTokens(node, node.selfClosing ? 2 : 1)[0];
-				let openLine = source.lines[opening.loc.start.line - 1];
-				let closeLine = source.lines[closing.loc.start.line - 1];
+				const openLine = source.lines[opening.loc.start.line - 1];
+				const closeLine = source.lines[closing.loc.start.line - 1];
 
-				let openIndentation = getIndent(openLine);
-				let closeIndentation = getIndent(closeLine);
-				let hasCorrectLocation = openIndentation === closeIndentation;
+				const openIndentation = getIndent(openLine);
+				const closeIndentation = getIndent(closeLine);
+				const hasCorrectLocation = openIndentation === closeIndentation;
 				if(hasCorrectLocation) {
 					return;
 				}

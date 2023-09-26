@@ -1,3 +1,5 @@
+'use strict';
+
 const getIndent = (line) => {
 	return /^\s*/.exec(line)[0];
 };
