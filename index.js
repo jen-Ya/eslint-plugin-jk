@@ -87,6 +87,7 @@ module.exports = {
 				],
 				'object-shorthand': ['error', 'always'],
 				'prefer-const': 'error',
+				'template-curly-spacing': ['error', 'always'],
 			},
 		},
 		'recommended-jsx': {
