@@ -169,5 +169,17 @@ module.exports = {
 				'es6': true,
 			},
 		},
+		'default-node': {
+			'extends': ['plugin:jk/recommended'],
+			'plugins': ['jk'],
+			'parserOptions': {
+				'ecmaVersion': 'latest',
+				'sourceType': 'module',
+			},
+			'env': {
+				'node': true,
+				'es6': true,
+			},
+		},
 	},
 };
