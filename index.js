@@ -153,7 +153,7 @@ module.exports = {
 				},
 			},
 			'parserOptions': {
-				'ecmaVersion': 2019,
+				'ecmaVersion': 'latest',
 				'ecmaFeatures': {
 					'jsx': true,
 					'modules': true,
