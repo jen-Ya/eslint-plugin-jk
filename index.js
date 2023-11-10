@@ -139,6 +139,17 @@ module.exports = {
 				'jk/jsx-closing-bracket-location': 'error',
 			},
 		},
+		'recommended-ts': {
+			extends: [
+				'plugin:jk/recommended',
+				'plugin:@typescript-eslint/eslint-recommended',
+				'plugin:@typescript-eslint/recommended',
+			],
+			plugins: [
+				'jk',
+				'@typescript-eslint',
+			],
+		},
 		'default-jsx-node': {
 			'extends': ['plugin:jk/recommended-jsx-jk'],
 			'parser': '@babel/eslint-parser',
@@ -180,6 +191,10 @@ module.exports = {
 				'node': true,
 				'es6': true,
 			},
+		},
+		'default-ts': {
+			'extends': ['plugin:jk/recommended-ts'],
+			'parser': '@typescript-eslint/parser',
 		},
 	},
 };
