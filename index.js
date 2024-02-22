@@ -91,6 +91,11 @@ module.exports = {
 				'template-curly-spacing': ['error', 'always'],
 				'func-style': ['error', 'declaration', { 'allowArrowFunctions': true }],
 				'prefer-arrow-callback': 'error',
+				'no-extra-parens': [
+					'error', 'all', {
+						'ternaryOperandBinaryExpressions': false,
+					},
+				],
 			},
 		},
 		'recommended-jsx': {
