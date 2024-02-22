@@ -89,6 +89,8 @@ module.exports = {
 				'no-var': 'error',
 				'prefer-const': 'error',
 				'template-curly-spacing': ['error', 'always'],
+				'func-style': ['error', 'declaration', { 'allowArrowFunctions': true }],
+				'prefer-arrow-callback': 'error',
 			},
 		},
 		'recommended-jsx': {
