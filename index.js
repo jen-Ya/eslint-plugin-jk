@@ -86,6 +86,7 @@ module.exports = {
 					{ 'blankLine': 'always', 'next': 'export', 'prev': '*' },
 				],
 				'object-shorthand': ['error', 'always'],
+				'no-var': 'error',
 				'prefer-const': 'error',
 				'template-curly-spacing': ['error', 'always'],
 			},
