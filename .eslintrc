@@ -1,14 +1,7 @@
 {
-	"extends": [
-		"plugin:jk/recommended"
-	],
-	"plugins": [
-		"jk"
-	],
-	"env": {
-		"node": true
-	},
+	"extends": [ "plugin:default-node" ],
+	"plugins": [ "jk" ],
 	"parserOptions": {
-		"ecmaVersion": "latest"
+		"sourceType": "commonjs"
 	}
 }
