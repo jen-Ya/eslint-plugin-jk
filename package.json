@@ -5,7 +5,7 @@
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.22.15",
 		"@typescript-eslint/parser": "^6.10.0",
-		"eslint": "^8.54.0",
+		"eslint": "^8.56.0",
 		"eslint-plugin-jk": "github:jen-Ya/eslint-plugin-jk"
 	}
 }
