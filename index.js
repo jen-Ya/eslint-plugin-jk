@@ -158,6 +158,18 @@ module.exports = {
 				'@typescript-eslint',
 			],
 		},
+		'default-browser': {
+			'extends': ['plugin:jk/recommended'],
+			'plugins': ['jk'],
+			'parserOptions': {
+				'ecmaVersion': 'latest',
+				'sourceType': 'module',
+			},
+			'env': {
+				'browser': true,
+				'es6': true,
+			},
+		},
 		'default-jsx-node': {
 			'extends': ['plugin:jk/recommended-jsx-jk'],
 			'parser': '@babel/eslint-parser',
