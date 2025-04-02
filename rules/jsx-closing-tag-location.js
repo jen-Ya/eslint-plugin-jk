@@ -1,6 +1,4 @@
-'use strict';
-
-const { getIndent } = require('./utils');
+import { getIndent } from './utils.js';
 
 const getFirstNodeInLine = (context, node) => {
 	const sourceCode = context.getSourceCode();
@@ -25,7 +23,7 @@ const isNodeFirstInLine = (context, node) => {
 	return startLine !== endLine;
 };
 
-module.exports = {
+export default {
 	meta: {
 		docs: {
 			description: 'Validate closing tag location for multiline JSX',

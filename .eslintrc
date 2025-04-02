@@ -1,7 +1,0 @@
-{
-	"extends": [ "plugin:jk/default-node" ],
-	"plugins": [ "jk" ],
-	"parserOptions": {
-		"sourceType": "commonjs"
-	}
-}

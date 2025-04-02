@@ -1,8 +1,6 @@
-'use strict';
+import { getIndent } from './utils.js';
 
-const { getIndent } = require('./utils');
-
-module.exports = {
+export default {
 	meta: {
 		docs: {
 			description: 'Validate closing tag location in JSX',
