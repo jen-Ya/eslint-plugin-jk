@@ -21,11 +21,6 @@ export default tseslint.config(
 					'objectLiteralShorthandProperties': true,
 				},
 			},
-			// 'env': {
-			// 	'browser': true,
-			// 	'node': true,
-			// 	'es6': true,
-			// },
 			globals: {
 				...globals.browser,
 				...globals.node,
