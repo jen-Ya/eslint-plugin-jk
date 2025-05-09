@@ -1,13 +1,53 @@
 {
 	"name": "eslint-plugin-jk",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"type": "module",
-	"main": "index.js",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./configs": {
+			"import": "./dist/configs/index.js",
+			"types": "./dist/configs/index.d.ts"
+		},
+		"./configs/defaultBrowser": {
+			"import": "./dist/configs/defaultBrowser.js",
+			"types": "./dist/configs/defaultBrowser.d.ts"
+		},
+		"./configs/defaultJsxNode": {
+			"import": "./dist/configs/defaultJsxNode.js",
+			"types": "./dist/configs/defaultJsxNode.d.ts"
+		},
+		"./configs/defaultNode": {
+			"import": "./dist/configs/defaultNode.js",
+			"types": "./dist/configs/defaultNode.d.ts"
+		},
+		"./configs/recommended": {
+			"import": "./dist/configs/recommended.js",
+			"types": "./dist/configs/recommended.d.ts"
+		},
+		"./configs/recommendedJsx": {
+			"import": "./dist/configs/recommendedJsx.js",
+			"types": "./dist/configs/recommendedJsx.d.ts"
+		},
+		"./configs/recommendedTs": {
+			"import": "./dist/configs/recommendedTs.js",
+			"types": "./dist/configs/recommendedTs.d.ts"
+		}
+	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.24.7",
-		"@typescript-eslint/parser": "^8",
+		"@types/eslint": "^9.6.1",
+		"@types/jest": "^29.5.14",
+		"@typescript-eslint/parser": "^8.32.0",
 		"eslint": "^9.4.0",
-		"eslint-plugin-jk": "file:."
+		"eslint-plugin-jk": "file:.",
+		"jest": "^29.7.0",
+		"jiti": "^2.4.2",
+		"ts-jest": "^29.3.2"
 	},
 	"dependencies": {
 		"@eslint/js": "^9.4.0",
@@ -15,7 +55,15 @@
 		"@typescript-eslint/eslint-plugin": "^8.29.0",
 		"eslint-plugin-react": "^7.34.2",
 		"globals": "^16.0.0",
-		"jest": "^29.7.0",
-		"typescript-eslint": "^8.29.0"
+		"typescript-eslint": "^8.32.0"
+	},
+	"files": [
+		"dist/**/*.js",
+		"dist/**/*.d.ts",
+		"dist/**/*.js.map",
+		"dist/**/*.d.ts.map"
+	],
+	"scripts": {
+		"test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest"
 	}
 }

@@ -1,7 +1,5 @@
-/**
- * @type {Readonly<import('eslint').Linter.RulesRecord>}
- */
-export default {
+import { Linter } from 'eslint';
+const jsxOpinions: Linter.RulesRecord = {
 	'react/jsx-curly-spacing': [
 		'error', {
 			when: 'always',
@@ -30,3 +28,4 @@ export default {
 	],
 	'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 };
+export default jsxOpinions;

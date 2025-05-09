@@ -1,7 +1,5 @@
-/**
- * @type {Readonly<import('eslint').Linter.RulesRecord>}
- */
-export default {
+import { Linter } from "eslint";
+const opinions: Linter.RulesRecord = {
 	'@stylistic/no-multiple-empty-lines': [
 		'error', {
 			max: 1,
@@ -90,3 +88,4 @@ export default {
 		},
 	],
 };
+export default opinions;

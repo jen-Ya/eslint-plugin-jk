@@ -1,12 +1,11 @@
-import recommendedJsxJk from './recommendedJsxJk.js';
+import recommendedJsx from './recommendedJsx.js';
 import babelParser from '@babel/eslint-parser';
 import tseslint from 'typescript-eslint';
 import react from 'eslint-plugin-react';
-import jk from '../plugin/jk.js';
 import globals from 'globals';
 
 export default tseslint.config(
-	recommendedJsxJk,
+	recommendedJsx,
 	{
 		languageOptions: {
 			parser: babelParser,
@@ -30,7 +29,6 @@ export default tseslint.config(
 		},
 		plugins: {
 			react,
-			jk,
 		},
 		settings: {
 			react: {

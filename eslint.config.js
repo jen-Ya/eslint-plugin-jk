@@ -1,8 +1,14 @@
-// import config from './configs/defaultBrowser.js';
-// import config from './configs/defaultNode.js';
-import config from './configs/defaultJsxNode.js';
-// import config from './configs/defaultTs.js';
-// import recommended from 'eslint-plugin-jk/configs/recommended.js';
-// import recommended from 'eslint-plugin-jk/configs/recommendedTs.js';
+import tseslint from 'typescript-eslint';
+import config from './configs/defaultNode';
+import globals from 'globals';
 
-export default config;
+export default tseslint.config(
+	config,
+	{
+		languageOptions: {
+			globals: {
+				...globals.jest,
+			},
+		},
+	},
+);

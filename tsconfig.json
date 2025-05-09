@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"lib": ["dom", "es6"],
+		"allowJs": true,
+		"checkJs": false,
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"jsx": "react",
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"declaration": true,
+		"declarationMap": true,
+		"outDir": "dist",
+	},
+	// *.test.[jt]s files are excluded from the base tsconfig
+	"exclude": [
+		"node_modules",
+		"dist",
+		"docs",
+		"e2e",
+		"tests",
+		"eslint.config.js",
+	],
+}
+
