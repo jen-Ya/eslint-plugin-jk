@@ -9,16 +9,17 @@ export default tseslint.config(
 	recommendedJsxJk,
 	{
 		languageOptions: {
-			'parser': babelParser,
-			'parserOptions': {
-			'ecmaVersion': 'latest',
-				'ecmaFeatures': {
-					'jsx': true,
-					'modules': true,
-					'es6': true,
-					'blockBindings': true,
-					'arrowFunctions': true,
-					'objectLiteralShorthandProperties': true,
+			parser: babelParser,
+			parserOptions: {
+				requireConfigFile: false,
+				ecmaVersion: 'latest',
+				ecmaFeatures: {
+					jsx: true,
+					modules: true,
+					es6: true,
+					blockBindings: true,
+					arrowFunctions: true,
+					objectLiteralShorthandProperties: true,
 				},
 			},
 			globals: {
@@ -27,14 +28,14 @@ export default tseslint.config(
 				...globals.es2025,
 			},
 		},
-		'plugins': {
+		plugins: {
 			react,
 			jk,
 		},
-		'settings': {
-			'react': {
-				'pragma': 'React',
-				'version': 'detect',
+		settings: {
+			react: {
+				pragma: 'React',
+				version: 'detect',
 			},
 		},
 	},

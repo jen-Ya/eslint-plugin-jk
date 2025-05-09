@@ -11,7 +11,7 @@ export default tseslint.config(
 			globals: {
 				...globals.node,
 				...globals.es2025,
-			}
+			},
 		},
 	},
 );

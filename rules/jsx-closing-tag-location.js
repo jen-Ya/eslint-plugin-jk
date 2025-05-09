@@ -54,7 +54,8 @@ export default {
 			let message;
 			if(!nodeFirstInLine) {
 				message = 'Closing tag of a multiline JSX expression must be on its own line.';
-			} else {
+			}
+			else {
 				message = 'Expected closing tag to match indentation of opening.';
 			}
 
