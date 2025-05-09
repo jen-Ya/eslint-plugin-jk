@@ -5,9 +5,6 @@ stages:
   - build
   - publish
 
-variables:
-  NPM_CONFIG_USERCONFIG: "$CI_PROJECT_DIR/.npmrc"
-
 prepare:
   stage: prepare
   script:
