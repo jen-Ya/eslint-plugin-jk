@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`eslint-plugin-jk recommended should fix member delimiter style 1`] = `
+"interface A {
+	foo: string;
+	bar: number;
+}
+interface B { foo: string; bar: number }
+"
+`;
