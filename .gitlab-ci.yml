@@ -26,9 +26,8 @@ build:
 
 publish:
   stage: publish
-  # run only on main branch (adjust as needed)
   only:
-    - main
+    - tags
   script:
     # set package name
     - npm pkg set name=@q1/eslint-plugin-jk
