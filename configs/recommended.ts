@@ -8,5 +8,8 @@ export default tseslint.config(
 	stylistic.configs.recommended,
 	{
 		rules: jsOpinions,
+		plugins: {
+			'@stylistic/eslint-plugin': stylistic,
+		}
 	},
 );
