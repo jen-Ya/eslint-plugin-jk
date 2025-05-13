@@ -1,15 +1,12 @@
 image: node:22
+tags:
+  - docker
+
 
 stages:
   - prepare
   - build
   - publish
-
-variables:
-  # point npm at your custom .npmrc
-  NPM_CONFIG_USERCONFIG: "$CI_PROJECT_DIR/.npmrc"
-  # tell asdf to skip the .tool-versions file and use the container’s Node install
-  ASDF_NODEJS_VERSION: "system"
 
 prepare:
   stage: prepare
