@@ -51,7 +51,8 @@
 		"eslint-plugin-jk": "file:.",
 		"jest": "^29.7.0",
 		"jiti": "^2.4.2",
-		"ts-jest": "^29.3.2"
+		"ts-jest": "^29.3.2",
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
 		"@eslint/js": "^9.4.0",
