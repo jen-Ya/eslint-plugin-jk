@@ -26,7 +26,7 @@ prepare:
 build:
   stage: build
   script:
-    - npm run tsc
+    - npx tsc
 
 publish:
   stage: publish
