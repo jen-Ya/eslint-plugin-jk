@@ -1,6 +1,10 @@
 image: node:22
 
+stages:
+  - publish
+
 publish:
+  stage: publish
   tags:
     - docker
   only:
