@@ -1,6 +1,10 @@
 image: node:22
-tags:
-  - docker
+
+# send all jobs to runners tagged “docker”
+default:
+  tags:
+    - docker
+
 
 
 stages:
