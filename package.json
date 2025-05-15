@@ -1,6 +1,6 @@
 {
 	"name": "@q1/eslint-plugin-jk",
-	"version": "2.0.5",
+	"version": "2.0.7",
 	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
