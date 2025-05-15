@@ -38,6 +38,10 @@ const opinions: Linter.RulesRecord = {
 	'@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
 	'@stylistic/indent-binary-ops': 'off',
 	'@stylistic/operator-linebreak': ['error', 'after', { 'overrides': { '?': 'before', ':': 'before' } }],
+	'quote-props': 'off',
+	'@stylistic/quote-props': ['error', 'consistent-as-needed'],
+	'brace-style': 'off',
+	'@stylistic/brace-style': ['warn', '1tbs'],
 	'@stylistic/keyword-spacing': [
 		'error', {
 			overrides: {
