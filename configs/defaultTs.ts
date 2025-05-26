@@ -13,4 +13,7 @@ export default tseslint.config(
 			},
 		},
 	},
+	{
+		files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
+	}
 );
