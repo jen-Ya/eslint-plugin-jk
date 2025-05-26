@@ -5,6 +5,8 @@ exports[`eslint-plugin-jk recommended should fix member delimiter style 1`] = `
 	foo: string;
 	bar: number;
 }
-interface B { foo: string; bar: number }
+interface B {
+	foo: string; bar: number;
+}
 "
 `;
