@@ -224,6 +224,7 @@ describe('eslint-plugin-jk recommended', () => {
 		'if(a)\n{\n\tb();\n}\n',
 		'if(a) {\n\tb();\n}\n',
 	));
+	it('should not fix brace style', nofixes('try {\n\tfoo();\n} catch (e) {\n\tbar(e);\n}\n'));
 	// keyword spacing
 	it('should fix keyword spacing: if', fixes(
 		'if (1){}\n',
