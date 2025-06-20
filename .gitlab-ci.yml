@@ -21,6 +21,6 @@ publish:
     # compile typescript
     - npx tsc
     # set package name
-    - npm pkg set name=@q1/eslint-plugin-jk
+    - npm pkg set name=@q1/eslint-plugin-jk-2
     # publish to GitLab registry
     - npm publish
