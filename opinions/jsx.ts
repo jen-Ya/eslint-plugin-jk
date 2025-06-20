@@ -1,5 +1,12 @@
 import { Linter } from 'eslint';
 const jsxOpinions: Linter.RulesRecord = {
+	'@stylistic/jsx-quotes': ['error', 'prefer-single'],
+	'@stylistic/jsx-wrap-multilines': 'off',
+	'@stylistic/jsx-indent-props': ['error', 'tab'],
+	'@stylistic/jsx-curly-spacing': ['error', 'always'],
+	'@stylistic/jsx-function-call-newline': 'off',
+	'@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
+	'@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
 	'react/jsx-curly-spacing': [
 		'error', {
 			when: 'always',
@@ -16,7 +23,6 @@ const jsxOpinions: Linter.RulesRecord = {
 		},
 	],
 	'react/jsx-indent': ['error', 'tab'],
-	'@stylistic/jsx-quotes': ['error', 'prefer-single'],
 	'react/jsx-curly-newline': 'error',
 	'react/jsx-max-props-per-line': [
 		'error', {

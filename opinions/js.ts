@@ -95,14 +95,6 @@ const opinions: Linter.RulesRecord = {
 			ternaryOperandBinaryExpressions: false,
 		},
 	],
-	// TODO: should not be in this ruleset
-	'@stylistic/jsx-quotes': ['error', 'prefer-single'],
-	'@stylistic/jsx-wrap-multilines': 'off',
-	'@stylistic/jsx-indent-props': ['error', 'tab'],
-	'@stylistic/jsx-curly-spacing': ['error', 'always'],
-	'@stylistic/jsx-function-call-newline': 'off',
-	'@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
-	'@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
 };
 
 export default opinions;
