@@ -29,6 +29,7 @@ const opinions: Linter.RulesRecord = {
 	// TODO: Actually we should not allow multiple vars in one statement at all
 	'@stylistic/one-var-declaration-per-line': ['error'],
 	'@stylistic/comma-dangle': ['error', 'always-multiline'],
+	// TODO: Is this still needed?
 	'@stylistic/indent-binary-ops': 'off',
 	'@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
 	'quote-props': 'off',
