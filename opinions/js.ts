@@ -1,5 +1,6 @@
 import { Linter } from 'eslint';
 const opinions: Linter.RulesRecord = {
+	'@stylistic/eol-last': 'error',
 	'@stylistic/no-multiple-empty-lines': [
 		'error', {
 			max: 1,
@@ -23,19 +24,13 @@ const opinions: Linter.RulesRecord = {
 	'@stylistic/indent': ['error', 'tab', { SwitchCase: 1 }],
 	'@stylistic/arrow-spacing': 'error',
 	'@stylistic/arrow-parens': ['error', 'always'],
-	'react/prop-types': 0,
 	'@stylistic/no-trailing-spaces': 'error',
 	'@stylistic/object-curly-spacing': ['error', 'always'],
 	'@stylistic/space-infix-ops': ['error'],
+	// TODO: Actually we should not allow multiple vars in one statement at all
 	'@stylistic/one-var-declaration-per-line': ['error'],
 	'@stylistic/comma-dangle': ['error', 'always-multiline'],
-	'@stylistic/jsx-quotes': ['error', 'prefer-single'],
-	'@stylistic/jsx-wrap-multilines': 'off',
-	'@stylistic/jsx-indent-props': ['error', 'tab'],
-	'@stylistic/jsx-curly-spacing': ['error', 'always'],
-	'@stylistic/jsx-function-call-newline': 'off',
-	'@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
-	'@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
+	// TODO: Is this still needed?
 	'@stylistic/indent-binary-ops': 'off',
 	'@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
 	'quote-props': 'off',
@@ -82,7 +77,7 @@ const opinions: Linter.RulesRecord = {
 		},
 	],
 	'no-undef': 'error',
-	'key-spacing': 'error',
+	'@stylistic/key-spacing': 'error',
 	'@stylistic/padding-line-between-statements': [
 		'error',
 		{ blankLine: 'always', prev: '*', next: 'class' },

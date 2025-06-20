@@ -1,13 +1,20 @@
 import { Linter } from 'eslint';
 const jsxOpinions: Linter.RulesRecord = {
-	'react/jsx-curly-spacing': [
+	'@stylistic/jsx-quotes': ['error', 'prefer-single'],
+	'@stylistic/jsx-wrap-multilines': 'off',
+	'@stylistic/jsx-indent-props': 'off',
+	'@stylistic/jsx-curly-spacing': [
 		'error', {
 			when: 'always',
 			children: true,
 		},
 	],
-	'react/jsx-equals-spacing': ['error', 'never'],
-	'react/jsx-tag-spacing': [
+	'@stylistic/jsx-function-call-newline': 'off',
+	// TODO: this is not how I actually want it to be, I would like the closing bracket and closing tag to be on the same line
+	'@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
+	'@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
+	'@stylistic/jsx-equals-spacing': ['error', 'never'],
+	'@stylistic/jsx-tag-spacing': [
 		'error', {
 			closingSlash: 'never',
 			beforeSelfClosing: 'always',
@@ -15,10 +22,9 @@ const jsxOpinions: Linter.RulesRecord = {
 			beforeClosing: 'never',
 		},
 	],
-	'react/jsx-indent': ['error', 'tab'],
-	'@stylistic/jsx-quotes': ['error', 'prefer-single'],
-	'react/jsx-curly-newline': 'error',
-	'react/jsx-max-props-per-line': [
+	'@stylistic/jsx-indent': ['error', 'tab'],
+	'@stylistic/jsx-curly-newline': 'error',
+	'@stylistic/jsx-max-props-per-line': [
 		'error', {
 			maximum: {
 				single: 2,
@@ -26,7 +32,7 @@ const jsxOpinions: Linter.RulesRecord = {
 			},
 		},
 	],
-	'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+	'@stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 };
 
 export default jsxOpinions;

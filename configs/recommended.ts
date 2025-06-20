@@ -9,7 +9,7 @@ export default tseslint.config(
 	{
 		rules: jsOpinions,
 		plugins: {
-			'@stylistic/eslint-plugin': stylistic,
+			'@stylistic': stylistic,
 		},
 	},
 );

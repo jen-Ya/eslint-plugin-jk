@@ -69,6 +69,7 @@
 		"dist/**/*.d.ts.map"
 	],
 	"scripts": {
-		"test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest"
+		"test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest",
+		"test-watch": "npm run test -- --watch"
 	}
 }
