@@ -49,12 +49,12 @@ const nofixes = (input: string) => async() => {
 
 const errors = (input: string, ruleId: string) => async() => {
 	const result = await linter.lintText(input);
-	expect(result[0].messages.map(m => m.ruleId)).toContain(ruleId);
+	expect(result[0].messages.map((m) => m.ruleId)).toContain(ruleId);
 };
 
 const noerrors = (input: string, ruleId: string) => async() => {
 	const result = await linter.lintText(input);
-	expect(result[0].messages.map(m => m.ruleId)).not.toContain(ruleId);
+	expect(result[0].messages.map((m) => m.ruleId)).not.toContain(ruleId);
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars

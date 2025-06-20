@@ -1,5 +1,6 @@
 import { Linter } from 'eslint';
 const opinions: Linter.RulesRecord = {
+	'@stylistic/eol-last': 'error',
 	'@stylistic/no-multiple-empty-lines': [
 		'error', {
 			max: 1,
