@@ -28,4 +28,5 @@ const jsxOpinions: Linter.RulesRecord = {
 	],
 	'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 };
+
 export default jsxOpinions;

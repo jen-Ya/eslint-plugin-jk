@@ -1,4 +1,4 @@
-import { Linter } from "eslint";
+import { Linter } from 'eslint';
 const opinions: Linter.RulesRecord = {
 	'@stylistic/no-multiple-empty-lines': [
 		'error', {
@@ -37,7 +37,7 @@ const opinions: Linter.RulesRecord = {
 	'@stylistic/jsx-closing-tag-location': ['error', 'line-aligned'],
 	'@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
 	'@stylistic/indent-binary-ops': 'off',
-	'@stylistic/operator-linebreak': ['error', 'after', { 'overrides': { '?': 'before', ':': 'before' } }],
+	'@stylistic/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
 	'quote-props': 'off',
 	'@stylistic/quote-props': ['error', 'consistent-as-needed'],
 	'brace-style': 'off',
@@ -102,4 +102,5 @@ const opinions: Linter.RulesRecord = {
 		},
 	],
 };
+
 export default opinions;

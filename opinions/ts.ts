@@ -1,5 +1,5 @@
 import { Linter } from 'eslint';
-const tsOpinions:Linter.RulesRecord = {
+const tsOpinions: Linter.RulesRecord = {
 	'@stylistic/member-delimiter-style': [
 		'error', {
 			multiline: {
@@ -12,5 +12,6 @@ const tsOpinions:Linter.RulesRecord = {
 			},
 		},
 	],
-}
+};
+
 export default tsOpinions;

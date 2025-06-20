@@ -8,5 +8,5 @@ export default tseslint.config(
 	recommended,
 	{
 		rules: tsOpinions,
-	}
+	},
 );
