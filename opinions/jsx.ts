@@ -33,6 +33,11 @@ const jsxOpinions: Linter.RulesRecord = {
 		},
 	],
 	'@stylistic/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+	'@stylistic/jsx-one-expression-per-line': [
+		'error', {
+			allow: 'single-line',
+		},
+	],
 };
 
 export default jsxOpinions;
