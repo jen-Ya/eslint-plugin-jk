@@ -6,7 +6,7 @@ const linter = new ESLint({
 	fix: true,
 });
 
-const { fixes, nofixes } = linterTestUtils(linter);
+const { fixes, nofixes, errors, noerrors } = linterTestUtils(linter);
 
 describe('eslint-plugin-jk recommended', () => {
 	it('should work', fixes(
@@ -84,5 +84,19 @@ describe('eslint-plugin-jk recommended', () => {
 	it('should enforce first prop new line in jsx', fixes(
 		'<div className=\'test\'\nfoo={bar} />;\n',
 		'<div\n\tclassName=\'test\'\n\tfoo={ bar }\n/>;\n',
+	));
+	// jsx-uses-vars / jsx-uses-react: no-unused-vars does not count JSX
+	// references on its own
+	it('should not report components that are only used in jsx', noerrors(
+		'import Foo from \'./foo.js\';\n\nexport const Bar = () => <Foo />;\n',
+		'no-unused-vars',
+	));
+	it('should not report the React import with the classic runtime', noerrors(
+		'import React from \'react\';\n\nexport const Bar = () => <div />;\n',
+		'no-unused-vars',
+	));
+	it('should still report actually unused imports', errors(
+		'import Foo from \'./foo.js\';\n\nexport const Bar = () => <div />;\n',
+		'no-unused-vars',
 	));
 });
