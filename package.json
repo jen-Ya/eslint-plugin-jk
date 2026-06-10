@@ -43,7 +43,6 @@
 		}
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.24.7",
 		"@types/eslint": "^9.6.1",
 		"@types/jest": "^29.5.14",
 		"@typescript-eslint/parser": "^8.32.0",
@@ -55,6 +54,7 @@
 		"typescript": "^5.8.3"
 	},
 	"dependencies": {
+		"@babel/eslint-parser": "^7.24.7",
 		"@eslint/js": "^9.4.0",
 		"@stylistic/eslint-plugin": "^4.2.0",
 		"@typescript-eslint/eslint-plugin": "^8.29.0",
@@ -69,6 +69,8 @@
 		"dist/**/*.d.ts.map"
 	],
 	"scripts": {
+		"build": "npx tsc",
+		"pretest": "npm run build",
 		"test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" npx jest",
 		"test-watch": "npm run test -- --watch"
 	}
