@@ -336,4 +336,15 @@ describe('eslint-plugin-jk recommended', () => {
 		'const a = ((b + c) * d)\n',
 		'const a = (b + c) * d;\n',
 	));
+	// no-extra-parens must not strip the parens that no-mixed-operators
+	// (enabled by @stylistic recommended) requires
+	it('should keep parens around nested binary expressions', nofixes('export const x = (a, b, c) => a || (b && c);\n'));
+	it('should not report parens around nested binary expressions', noerrors(
+		'export const x = (a, b, c) => a || (b && c);\n',
+		'@stylistic/no-extra-parens',
+	));
+	it('should report mixed operators without parens', errors(
+		'export const x = (a, b, c) => a || b && c;\n',
+		'@stylistic/no-mixed-operators',
+	));
 });

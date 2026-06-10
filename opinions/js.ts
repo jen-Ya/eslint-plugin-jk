@@ -94,6 +94,9 @@ const opinions: Linter.RulesRecord = {
 	'@stylistic/no-extra-parens': [
 		'error', 'all', {
 			ternaryOperandBinaryExpressions: false,
+			// @stylistic recommended enables no-mixed-operators, which requires
+			// parens exactly where 'all' would strip them
+			nestedBinaryExpressions: false,
 		},
 	],
 };
