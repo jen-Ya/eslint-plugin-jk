@@ -1,4 +1,4 @@
-import configs from './configs/index';
+import configs from './configs/index.js';
 
 export default {
 	configs,
