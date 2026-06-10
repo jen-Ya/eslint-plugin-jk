@@ -12,7 +12,10 @@ export default {
 		],
 	},
 	moduleNameMapper: {
-		'(.+)\\.js': '$1',
+		// only strip the .js extension from relative imports - unanchored
+		// '(.+)\.js' also matched the '.js' inside paths like
+		// 'eslint/package.json' and broke bare-module resolution
+		'^(\\.{1,2}/.*)\\.js$': '$1',
 	},
 	extensionsToTreatAsEsm: ['.ts'],
 };
